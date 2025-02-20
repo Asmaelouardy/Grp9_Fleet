@@ -1,17 +1,16 @@
 package com.fleet.pages;
 
 import com.fleet.utilities.Driver;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckboxesAPPage {
+public class US07Page_AP {
 
 
 
 
-    public CheckboxesAPPage() {
+    public US07Page_AP() {
         PageFactory.initElements(Driver.getDriver(), this);
 
 
