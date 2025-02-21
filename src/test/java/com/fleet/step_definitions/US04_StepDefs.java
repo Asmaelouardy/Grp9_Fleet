@@ -21,13 +21,26 @@ public class US04_StepDefs {
 
     @When("user should be able to see fleet module")
     public void userShouldBeAbleToSeeFleetModule() {
+
+        BrowserUtils.waitFor(3);
         vehicleContracts_ae.Fleet.click();
     }
 
     @Then("user clicks on Fleet modules and lands on Vehicle Contracts page")
     public void userClicksOnFleetModulesAndLandsOnVehicleContractsPage() {
+        BrowserUtils.waitFor(3);
         vehicleContracts_ae.VehicleContracts.click();
     }
 
 
+    @Then("user should NOT access the Vehicle Contracts page")
+    public void userShouldNOTAccessTheVehicleContractsPage() {
+        vehicleContracts_ae.VehicleContracts.click();
+    }
+
+    @And("user should see {string}")
+    public void userShouldSee(String expectedMessage) {
+        String actualMessage = vehicleContracts_ae.permissionMessage.getText();
+        Assert.assertEquals(actualMessage, expectedMessage);
+    }
 }

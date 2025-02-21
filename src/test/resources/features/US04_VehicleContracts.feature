@@ -10,10 +10,13 @@ Feature:  Users should access to Vehicle Contracts page.
     Given the user logged in as "sales manager"
     When user should be able to see fleet module
     Then user clicks on Fleet modules and lands on Vehicle Contracts page
-
+    Then user should NOT access the Vehicle Contracts page
+    And  user should see "You do not have permission to perform this action."
 
   @store_manager
   Scenario: Login as store manager
     Given the user logged in as "store manager"
     When user should be able to see fleet module
     Then user clicks on Fleet modules and lands on Vehicle Contracts page
+    Then user should NOT access the Vehicle Contracts page
+    And  user should see "You do not have permission to perform this action."

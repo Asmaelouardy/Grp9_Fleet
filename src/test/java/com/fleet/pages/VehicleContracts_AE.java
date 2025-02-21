@@ -12,19 +12,14 @@ public class VehicleContracts_AE {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id="prependedInput")
-    public WebElement usernameInput;
-
-    @FindBy(id = "prependedInput2")
-    public WebElement passwordInput;
-
-    @FindBy(id = "_submit")
-    public WebElement loginBtn;
-
     @FindBy(xpath = "//li[@class='dropdown dropdown-level-1']")
     public WebElement Fleet;
 
     @FindBy(xpath="//span[.='Vehicle Contracts']")
     public WebElement VehicleContracts;
+
+    @FindBy(xpath="//div[.='You do not have permission to perform this action.']")
+    public WebElement permissionMessage;
+
 
 }
