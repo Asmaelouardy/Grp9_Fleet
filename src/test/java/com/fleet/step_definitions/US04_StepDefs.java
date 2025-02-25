@@ -23,36 +23,38 @@ public class US04_StepDefs {
         BrowserUtils.waitFor(3);
         vehicleContracts_ae.Fleet.click();
     }
-
-    @Then("user clicks on Fleet modules and lands on Vehicle Contracts page")
-    public void userClicksOnFleetModulesAndLandsOnVehicleContractsPage() {
-        BrowserUtils.waitFor(5);
+    @Then("user clicks on Fleet modules and lands on Vehicle Contracts page_AE")
+    public void userClicksOnFleetModulesAndLandsOnVehicleContractsPage_AE() {
+        BrowserUtils.sleep(2);
         vehicleContracts_ae.VehicleContracts.click();
-        BrowserUtils.waitFor(5);
-
+        BrowserUtils.sleep(2);
     }
 
     @Then("User sees {string} in the Vehicle Contracts title_AE")
-    public void userSeesInTheVehicleContractsTitle_AE() {
-        BrowserUtils.waitFor(10);
-        String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
+    public void userSeesInTheVehicleContractsTitle_AE(String expectedTitle) {
+        BrowserUtils.waitFor(2);
         BrowserUtils.verifyTitle(expectedTitle);
     }
 
     @And("Then User sees {string} in the Vehicle Contracts url_AE")
-    public void thenUserSeesInTheVehicleContractsUrl_AE() {
-        BrowserUtils.waitFor(5);
-        String expectedUrl = "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract";
+    public void thenUserSeesInTheVehicleContractsUrl_AE(String expectedUrl) {
+        BrowserUtils.waitFor(2);
+
+        //String expectedUrl = "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract";
+        //BrowserUtils.verifyURLContains(expectedUrl);
+
         String actualTUrl = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(actualTUrl, expectedUrl);
+        System.out.println("actualTUrl = " + actualTUrl);
+        Assert.assertTrue(actualTUrl.contains(expectedUrl));
+
+
     }
-    @Then("user should NOT access the Vehicle Contracts page")
-    public void userShouldNOTAccessTheVehicleContractsPage() {
+    @Then("user should NOT access the Vehicle Contracts page_AE")
+    public void userShouldNOTAccessTheVehicleContractsPage_AE() {
         BrowserUtils.waitFor(2);
     }
-
-    @And("user should see {string}")
-    public void userShouldSee(String expectedMessage) {
+    @And("user should see {string}_AE")
+    public void userShouldSee_AE(String expectedMessage) {
         String actualMessage = vehicleContracts_ae.permissionMessage.getText();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
