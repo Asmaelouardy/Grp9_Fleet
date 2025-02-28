@@ -31,7 +31,7 @@ public class US06_EditCarInfo_StepDefinitions {
 
     }
     @Then("hover the mouse over the 3 dots “...”")
-    public void hover_the_mouse_over_the_dots(Integer int1) {
+    public void hover_the_mouse_over_the_dots() {
         actions.moveToElement(editCarInfoPage.dropdownToggle_OE).perform();
 
     }
