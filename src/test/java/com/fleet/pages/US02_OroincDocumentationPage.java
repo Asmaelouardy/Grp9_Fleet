@@ -6,7 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class US02_OroincDocumentationPage {
-    public US02_OroincDocumentationPage() {
+    public US02_OroincDocumentationPage()
+    {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

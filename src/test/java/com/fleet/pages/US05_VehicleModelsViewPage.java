@@ -19,8 +19,7 @@ public class US05_VehicleModelsViewPage {
    @FindBy(xpath = "(//span[contains(@class, 'title')])[4]")
    public WebElement fleetOptions;
 
-    @FindBy(xpath ="//table//th")
-    public List<WebElement> tableColumns;
+
 
 
 
