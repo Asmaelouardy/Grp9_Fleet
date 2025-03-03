@@ -19,6 +19,12 @@ public class US05_VehicleModelsViewPage {
    @FindBy(xpath = "(//span[contains(@class, 'title')])[4]")
    public WebElement fleetOptions;
 
+@FindBy(xpath = "//span[@class='grid-header-cell__label']")
+    public List<WebElement> columnNames;
+
+
+
+
 
 
 
